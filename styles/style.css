@@ -13,9 +13,11 @@
   margin: 0;
   flex-wrap: wrap;
 }
+
 .nav-item {
   margin: 0 15px;
 }
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -25,6 +27,7 @@
   padding: 5px 10px;
   border-radius: 3px;
 }
+
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
