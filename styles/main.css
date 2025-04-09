@@ -111,7 +111,7 @@ h2 {
 
 .anniversary-banner {
   position: relative;
-  height: 500px;
+  height: auto;
   background: linear-gradient(135deg, #0c1e4a, #152852);
   border-radius: 16px;
   overflow: hidden;
@@ -168,7 +168,7 @@ h2 {
 }
 
 .banner-subtitle {
-  font-size: 1.6rem;
+  font-size: 2rem;
   opacity: 0.9;
   margin-bottom: 0px;
   margin-top: 0px;
