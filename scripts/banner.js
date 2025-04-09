@@ -41,7 +41,7 @@
         prevBtn.addEventListener('click', prevSlide);
         
         // Автоперелистывание (опционально)
-        let slideInterval = setInterval(nextSlide, 5000);
+        let slideInterval = setInterval(nextSlide, 10000);
         
         // Остановка автоперелистывания при наведении
         banner.addEventListener('mouseenter', () => {
@@ -50,7 +50,7 @@
         
         // Возобновление автоперелистывания
         banner.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 10000);
         });
         
         // Показываем первый слайд
