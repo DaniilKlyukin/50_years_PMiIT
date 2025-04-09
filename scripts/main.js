@@ -47,7 +47,7 @@ function handleBannerClick(e) {
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 25; i++) {
     createConfetti(x, y);
   }
 }
