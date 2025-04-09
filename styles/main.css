@@ -1,210 +1,233 @@
 /* Добавляем в начало файла */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap");
 
 :root {
-    --primary-color: #1a3a8f;
-    --secondary-color: #0a1a4a;
-    --accent-color: #ffd700;
-    --text-color: #333;
-    --light-text: #fff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --primary-color: #1a3a8f;
+  --secondary-color: #0a1a4a;
+  --accent-color: #ffd700;
+  --text-color: #333;
+  --light-text: #fff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 body {
-    margin: 0;
-    font-family: 'Bookman old style', 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+  margin: 0;
+  font-family: "Bookman old style", "Arial", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 .page-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 150px;
-    background: white;
-    box-shadow: none;
-    min-height: 100vh;
-	background-color: white;
+  background-color: #0a1a4a;
+}
+
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 150px;
+  background: white;
+  box-shadow: none;
+  min-height: 100vh;
+  background-color: white;
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 20px 0;
-    border-bottom: 2px solid var(--accent-color);
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .university-logo img {
-    height: 80px;
-    margin-bottom: 20px;
+  height: 80px;
+  margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 .dates {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 .banner-section {
-    margin-bottom: 0px;
-    padding: 20px 0px;
-    background: none;
-    border-radius: 0px;
-    box-shadow: none;
+  margin-bottom: 0px;
+  padding: 20px 0px;
+  background: none;
+  border-radius: 0px;
+  box-shadow: none;
 }
 
 section {
-    margin-bottom: 40px;
-    padding: 20px 50px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  padding: 20px 50px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-	font-size: 2rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 10px;
-    margin-top: 0;
+  font-size: 2rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 10px;
+  margin-top: 0;
 }
 
 .about-section p {
-	font-size: 1.25rem;
-	text-align: justify;
+  font-size: 1.25rem;
+  text-align: justify;
 }
 
 .history-item {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .history-item h3 {
-	font-size: 1.5rem;
-    color: var(--secondary-color);
+  font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 
 .history-item p {
-	font-size: 1.25rem;
-	text-align: justify;
+  font-size: 1.25rem;
+  text-align: justify;
 }
 
 .contacts-section address {
-    font-style: normal;
+  font-style: normal;
 }
 
 .footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
 }
 
 .anniversary-banner {
-    position: relative;
-    height: 500px;
-    background: linear-gradient(135deg, #0c1e4a, #152852);
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 40px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    font-family: 'Playfair Display', serif;
-    perspective: 1000px;
+  position: relative;
+  height: 500px;
+  background: linear-gradient(135deg, #0c1e4a, #152852);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: "Playfair Display", serif;
+  perspective: 1000px;
 }
 
 .years {
-    font-size: 180px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.08);
-    position: absolute;
-    z-index: 1;
-    animation: float 6s ease-in-out infinite;
+  font-size: 180px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
 }
 
 .date-range {
-    font-size: 2.2rem;
-    z-index: 3;
-    background: linear-gradient(90deg, rgba(255,215,0,0.2), rgba(255,215,0,0.4));
-    padding: 12px 30px;
-    border-radius: 50px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 2.2rem;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(255, 215, 0, 0.4)
+  );
+  padding: 12px 30px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .banner-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 40px;
-    max-width: 800px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
 }
 
 .banner-title {
-	color: #ffd700;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-    font-size: 4rem;
-    margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out;
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
 }
 
 .banner-subtitle {
-    font-size: 1.6rem;
-    opacity: 0.9;
-    margin-bottom: 0px;
-	margin-top: 0px;
-    animation: fadeInUp 1s ease-out 0.3s both;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  opacity: 0.9;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  animation: fadeInUp 1s ease-out 0.3s both;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Анимации */
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Декор элементы */
 .banner-decoration {
-    position: absolute;
-    opacity: 0.1;
-    animation: rotate 30s linear infinite;
+  position: absolute;
+  opacity: 0.1;
+  animation: rotate 30s linear infinite;
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Конфетти */
 .confetti {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    opacity: 0;
-    border-radius: 50%;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
 }
 
 .math-symbol {
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.85);
-    position: absolute;
-    z-index: 1;
-    animation: float 6s ease-in-out infinite;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
 }
