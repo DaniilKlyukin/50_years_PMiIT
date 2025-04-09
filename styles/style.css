@@ -1,8 +1,8 @@
 .nav-menu {
-  background: linear-gradient(90deg, #0d4f8b, #1e90ff);
-  padding: 15px 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #1a3a8f, #2a4ba0, #1a3a8f);
+  color: white; /* Белый текст */
+  padding: 20px; /* Чтобы текст не прилипал к краям */
+  border-radius: 8px; /* Закругленные углы (по желанию) */
 }
 
 .nav-list {
@@ -15,7 +15,9 @@
 }
 
 .nav-item {
-  margin: 0 15px;
+  margin: 0 30px;
+  font-family: "Times", sans-serif;
+   font-size: 16px; /* Фиксированный размер */
 }
 
 .nav-link {
