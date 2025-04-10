@@ -1,12 +1,22 @@
-/* Стили для карусели баннера */
 .anniversary-banner {
   position: relative;
-  overflow: hidden;
   height: 400px;
+  background: linear-gradient(135deg, #0c1e4a, #152852);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: "Playfair Display", serif;
+  perspective: 1000px;
   background-color: #f0f0f0;
   border-radius: 10px;
   z-index: 0;
 }
+
 .banner-slide {
   position: absolute;
   width: 100%;
@@ -20,9 +30,19 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
+.banner-section {
+  margin-bottom: 0px;
+  padding: 20px 0px;
+  background: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
 .banner-slide.active {
   opacity: 1;
 }
+
 .banner-nav {
   position: absolute;
   top: 50%;
@@ -32,6 +52,7 @@
   transform: translateY(-50%);
   z-index: 1;
 }
+
 .banner-nav button {
   background: rgba(0, 0, 0, 0.5);
   color: white;
@@ -42,28 +63,115 @@
   border-radius: 50%;
   margin: 0 20px;
 }
+
 .banner-nav button:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+
 .years {
-  font-size: 120px;
+  font-size: 12em;
   font-weight: bold;
-  color: #2a5885;
   position: absolute;
   z-index: 1;
   opacity: 0.2;
+  color: rgba(97, 117, 160, 0.562);
+  animation: float 6s ease-in-out infinite;
 }
+
 .banner-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
   width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
 }
+
 .banner-title {
   font-size: 3.5em;
   margin-bottom: 10px;
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
 }
+
 .banner-subtitle {
   font-size: 1.5em;
   margin: 5px 0;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.3s both;
+  font-family: "Montserrat", sans-serif;
+}
+
+.banner-decoration {
+  position: absolute;
+  opacity: 0.1;
+  animation: rotate 30s linear infinite;
+}
+
+.confetti {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
+}
+
+.math-symbol {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.date-range {
+  width: 100%;
+  font-size: 1.5rem;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(255, 215, 0, 0.4)
+  );
+  padding: 5px 30px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

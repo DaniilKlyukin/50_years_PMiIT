@@ -72,7 +72,7 @@ function createConfetti(x, y) {
   confetti.style.top = `${y}px`;
 
   // Разные формы конфетти
-  const shape = shapes[Math.round(Math.random() * (shapes.length-1))];
+  const shape = shapes[Math.round(Math.random() * (shapes.length - 1))];
   if (shape === "circle") {
     confetti.style.borderRadius = "50%";
   } else {
