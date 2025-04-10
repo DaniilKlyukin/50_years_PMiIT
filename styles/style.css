@@ -1,10 +1,10 @@
 .nav-menu {
-  background: linear-gradient(90deg, #1a3a8f, #2a4ba0, #1a3a8f);
-  position: fixed; /* fixed - Фиксированное позиционирование  absolute - нет*/
-  color: white; /* Белый текст */
-  padding: 15px; /* Чтобы текст не прилипал к краям */
-  z-index: 1000; /* Важно! 1000 чтобы перекрывало*/
-  width: 100%; /* Ширина на весь экран */
+  background: linear-gradient(90deg, #0a1538, #1a3a8f, #2a4ba0, #1a3a8f);
+  position: fixed;
+  color: white;
+  padding: 15px;
+  z-index: 1000;
+  width: 100%;
 }
 
 /* Отступ для всех секций */
@@ -14,7 +14,7 @@
 #comments,
 #history,
 #creators {
-  scroll-margin-top: 70px; /* = высота меню */
+  scroll-margin-top: 70px;
 }
 
 .nav-list {
@@ -27,16 +27,29 @@
 }
 
 .nav-item {
-  margin: 0 30px;
+  margin: 0 15px; /* Уменьшаем отступ, т.к. разделитель добавит расстояние */
   font-family: "Montserrat", sans-serif;
-  font-size: 16px; /* Фиксированный размер */
+  font-size: 16px;
+  position: relative; /* Нужно для позиционирования разделителя */
+}
+
+/* Стиль разделителя */
+.nav-item:not(:last-child)::after {
+  content: "/";
+  color: #ff6b6b; /* Красный цвет (можно заменить на #ffffff с opacity) */
+  position: absolute;
+  right: -20px; /* Сдвигаем разделитель вправо */
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  opacity: 0.7;
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   transition: all 0.3s;
   padding: 5px 10px;
   border-radius: 3px;
