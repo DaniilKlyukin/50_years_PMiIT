@@ -1,10 +1,20 @@
 .nav-menu {
   background: linear-gradient(90deg, #1a3a8f, #2a4ba0, #1a3a8f);
+  position: fixed;  /* fixed - Фиксированное позиционирование  absolute - нет*/
   color: white; /* Белый текст */
-  padding: 20px; /* Чтобы текст не прилипал к краям */
-  border-radius: 8px; /* Закругленные углы (по желанию) */
+  padding: 15px; /* Чтобы текст не прилипал к краям */
+  z-index: 1000; /* Важно! 1000 чтобы перекрывало*/
+  width: 100%;      /* Ширина на весь экран */
 }
-
+/* Отступ для всех секций */
+#heads-gallery,
+#teachers-gallery,
+#photo,
+#comments,
+#history,
+#creators {
+  scroll-margin-top: 70px; /* = высота меню */
+  }
 .nav-list {
   display: flex;
   justify-content: center;
@@ -16,7 +26,7 @@
 
 .nav-item {
   margin: 0 30px;
-  font-family: "Times", sans-serif;
+  font-family: 'Montserrat', sans-serif;
    font-size: 16px; /* Фиксированный размер */
 }
 
@@ -24,7 +34,7 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   transition: all 0.3s;
   padding: 5px 10px;
   border-radius: 3px;

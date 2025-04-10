@@ -13,17 +13,20 @@
     <div>
         <nav class="nav-menu">
             <ul class="nav-list">
+			    <li class="nav-item"><a href="#main" class="nav-link">Главная</a></li>
+			    <li class="nav-item"><a href="#history" class="nav-link">История кафедры</a></li>
                 <li class="nav-item"><a href="#heads-gallery" class="nav-link">Галерея заведующих</a></li>
                 <li class="nav-item"><a href="#teachers-gallery" class="nav-link">Галерея преподавателей</a></li>
-                <li class="nav-item"><a href="#photo" class="nav-link">ФотоГалерея</a></li>
+                <li class="nav-item"><a href="#photo" class="nav-link">Фото-Галерея</a></li>
                 <li class="nav-item"><a href="#comments" class="nav-link">Отзывы выпускников</a></li>
-                <li class="nav-item"><a href="#history" class="nav-link">История кафедры</a></li>
-                <li class="nav-item"><a href="#creators" class="nav-link">Создатели сайта</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Контактная информация</a></li>
             </ul>
         </nav>
     </div>
+	<div class="left-decoration" id="left-banner"></div>
+    <div class="right-decoration" id="right-banner"></div>
     <div class="page-content">
-        <header class="header">
+        <header class="header", id ="main">
           <div class="university-logo">
             <img src="assets/logo.png" alt="ПМиИТ" />
           </div>
@@ -81,9 +84,9 @@
                 <h2>О мероприятиях</h2>
                 <p>В 2025 году отмечается 50-летний Юбилей кафедры «Прикладная математика» – «Прикладная математика и информационные технологии» (ПМ – ПМиИТ).</p>
                 <p>Кафедра была создана с целью популяризация преподавания математики и информатики как основы высшего профессионального инженерного образования, повышение престижа научных исследований на основе математического моделирования и информационных технологий, а также обмена знаниями и передовым опытом в области прикладной математики, информационных технологий, вычислительной механики и моделирования технических и социально-экономических систем.</p>
-            </section>
+            </section >
 
-            <section class="history-section">
+            <section id="history">
                 <h2>История кафедры</h2>
                 <article class="history-item">
                   <h3>1975: Основание кафедры</h3>
@@ -131,7 +134,7 @@
                 </article>
               </section>
     
-              <section class="contacts-section">
+              <section id="contact">
                 <h2>Контактная информация</h2>
                 <address>
                   <p><strong>Кафедра ПМиИТ:</strong></p>
@@ -157,5 +160,7 @@
 </div>
 <script src="scripts/main.js"></script>
 <script src="scripts/banner.js"></script>
+<script src="scripts/scroll.js"></script>
+<script src="scripts/side-banners.js"></script>
 </body>
 </html>
