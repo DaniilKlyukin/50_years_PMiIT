@@ -1,8 +1,8 @@
 .nav-menu {
-  background: linear-gradient(90deg, #0a1538, #1a3a8f, #2a4ba0, #1a3a8f);
+  background: linear-gradient(90deg, #0a1538, #1a3a8f, #0a1538);
   position: fixed;
   color: white;
-  padding: 15px;
+  padding: 10px;
   z-index: 1000;
   width: 100%;
 }
