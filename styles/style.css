@@ -1,10 +1,11 @@
 .nav-menu {
-  background: linear-gradient(90deg, #0a1538, #1a3a8f, #0a1538);
+  background: linear-gradient(90deg, #1a2a5a, #2a4aaf, #1a2a5a);
   position: fixed;
   color: white;
   padding: 10px;
   z-index: 1000;
   width: 100%;
+  .
 }
 
 /* Отступ для всех секций */
@@ -13,6 +14,7 @@
 #photo,
 #comments,
 #history,
+#plan,
 #creators {
   scroll-margin-top: 70px;
 }

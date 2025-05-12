@@ -1,6 +1,117 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+  
+  <!-- Lightbox CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+<!-- Ваши стили для ленты -->
+    <style>
+        /* Контейнер для всей ленты */
+        .gallery-container {
+            max-width: 100%;
+            margin: 40px auto;
+            position: relative;
+            padding: 0 40px; /* Отступы для кнопок навигации */
+        }
+        
+        /* Лента фотографий */
+        .photo-ribbon {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 10px;
+            scroll-behavior: smooth; /* Плавная прокрутка */
+            -webkit-overflow-scrolling: touch; /* Для iOS */
+            scrollbar-width: none; /* Скрыть полосу прокрутки в Firefox */
+        }
+        
+        .photo-ribbon::-webkit-scrollbar {
+            display: none; /* Скрыть полосу прокрутки в Chrome/Safari */
+        }
+        
+        /* Элементы фотографий */
+        .photo-item {
+            flex: 0 0 auto;
+            width: 300px;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .photo-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        
+        /* Подпись к фото */
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 57, 166, 0.7);
+            color: white;
+            padding: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        /* Кнопки навигации */
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 57, 166, 0.8);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scroll-btn:hover {
+            background: rgba(213, 43, 30, 0.8); /* Красный при наведении */
+        }
+        
+        .scroll-left {
+            left: 0;
+        }
+        
+        .scroll-right {
+            right: 0;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .photo-item {
+                width: 250px;
+                height: 180px;
+            }
+            
+            .scroll-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>50 лет кафедре ПМиИТ</title>
@@ -15,19 +126,19 @@
             <ul class="nav-list">
 			    <li class="nav-item"><a href="#main" class="nav-link">Главная</a></li>
 			    <li class="nav-item"><a href="#history" class="nav-link">История кафедры</a></li>
-                <li class="nav-item"><a href="#heads-gallery" class="nav-link">Галерея заведующих</a></li>
-                <li class="nav-item"><a href="#teachers-gallery" class="nav-link">Галерея преподавателей</a></li>
+                <li class="nav-item"><a href="#plan" class="nav-link">План развития</a></li>
                 <li class="nav-item"><a href="#photo" class="nav-link">Фото-Галерея</a></li>
                 <li class="nav-item"><a href="#comments" class="nav-link">Отзывы выпускников</a></li>
+			    <li class="nav-item"><a href="#heads-gallery" class="nav-link">Достижения кафедры</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Контактная информация</a></li>
             </ul>
         </nav>
     </div>
     <div class="page-content">
         <header class="header", id ="main">
-          <div class="university-logo">
+          <!--<div class="university-logo">
             <img src="assets/logo.png" alt="ПМиИТ" />
-          </div>
+          </div>-->
           <h1>
             Юбилейные мероприятия, посвященные 50-летию кафедры<br />«Прикладная
             математика» –<br />«Прикладная математика и информационные
@@ -87,7 +198,9 @@
 				  <a href="План Мероприятий.pdf" target="_blank">План мероприятий</a>
             </section >
 
-            <section id="history">
+           
+    
+	<section id="history">
                 <h2>История кафедры</h2>
                 <article class="history-item">
                   <h3>1975: Основание кафедры</h3>
@@ -131,10 +244,157 @@
                     основе объединения кафедр «ПМИ» и «МОИС». Заведующим
                     объединенной кафедры ПМиИТ был назначен д.т.н., профессор Русяк
                     Иван Григорьевич.
-                  </p>
+                  </p>	
+				  <p>
+                    К юбилею была подготовлена галерея заведующих кафедры ПМ-ПМиИТ
+                  </p>					  
+				   <a href="Галерея зав.кафедры ПМ-ПМиИТ.pdf" target="_blank">Галерея зав.кафедры ПМ-ПМиИТ</a>
                 </article>
               </section>
-    
+			  
+			   <section id="plan">
+                <h2>План развития кафедры</h2>
+                <article class="history-item">
+                  <h3>Программа развития
+кафедры «Прикладная математика и информационные технологии» (ПМиИТ)
+на период с 2025 – 2030 гг.</h3>
+                  <p> Программа развития кафедры ПМиИТ основывается на предположениях о востре-бованности:</p>
+<p>•	специалистов в области прикладной математики для решения задач импортозамещения программного обеспечения;</p>
+<p>•	специалистов в области искусственного интеллекта и информационных технологий в связи с расширением областей их применения.</p>
+<p>Для соответствия современным тенденциям развития информационных технологий, поддержания и развития компетенций в области математического компьютерного моделирования и искусственного интеллекта на базе кафедры ПМиИТ необходимо реализовать обучение студентов по двум направления подготовки:</p>
+<p>•	01.03.04, 01.04.04 – «Прикладная математика» (бакалавриат и магистратура);
+<p>•	01.03.02, 01.04.02 – «Прикладная математика и информатика» (бакалавриат и магистратура).
+
+                  </p>
+                </article> 
+                <article class="history-item">
+                  <h3>Цель образовательных программ «Прикладная математика» и «Прикладная математика и информатика»: </h3>
+                  <p>
+                    Подготовка высококвалифицированных специалистов в области математического моде-лирования процессов и явлений, протекающих в технических и социально-экономических системах, обладающих широкими компетенциями разработки и использования информационных технологий, методов обработки данных и искусственного интеллекта.
+<p>В дополнении к этому необходимо для развития наукоемких направлений исследо-ваний создать в ИжГТУ имени М.Т. Калашникова на базе кафедры ПМиИТ научно-образовательный кластер, куда должны войти: </p>
+<p>•	лаборатории «Математическая геофизика» – разработки методов обработки гео-физических данных;</p>
+<p>•	лаборатории «Баллистика» – разработка математического, алгоритмического и программного обеспечения для решения задач внутренней, внешней и конечной баллистики;</p>
+<p>•	научно-образовательного центра «Искусственный интеллект» – разработка и ис-пользование методов искусственного интеллекта; подготовка и преподавание курсов повышения квалификации в области искусственного интеллекта для студентов, преподавателей и других заинтересованных лиц.
+В составе лабораторий и научно-образовательного центра необходимо иметь вы-числительную высокопроизводительную технику для:</p>
+<p>•	математического моделирования сложных объектов и систем;</p>
+<p>•	трехмерной визуализации;</p>
+<p>•	интеллектуального анализа больших данных.</p>
+<p>Обеспечить финансирования оснащения и деятельности лаборатории за счет внеш-них и внутренних Грантов и Программ, а также за счет ОКР и НИР, выполняемых по заказу предприятий и организаций.</p>		  
+                    <p> На заседании кафедры был принят план мероприятий по повышению эффективности деятельности кафедры
+в части оказания услуг и выполнения работ:          </p>					  
+				   <a href="Программа развития_ПМиИТ_2030_1.pdf" target="_blank">План мероприятий на 2025-2030 год</a>
+                </article>
+              </section>
+	
+	<section id="photo">
+                <h2>Фото-Галерея</h2>               
+                 <article class="history-item">
+                  <h3>50 лет кафедре ПМ-ПМиИТ: история в фотографиях </h3>               	
+	 <div class="gallery-container">
+        <button class="scroll-btn scroll-left" aria-label="Прокрутить влево">←</button>
+        
+        <div class="photo-ribbon">
+            <!-- Пример фотографий - замените на свои -->
+            <div class="photo-item">
+                <img src="1.jpg" alt="История кафедры">
+                <div class="photo-caption">1970-е: Основание кафедры</div>
+            </div>
+            
+            <div class="photo-item">
+                <img src="2.jpg" alt="Учебный процесс">
+                <div class="photo-caption">1980-е: Первые лаборатории</div>
+            </div>
+            
+            <div class="photo-item">
+                <img src="3.jpg" alt="Научная работа">
+                <div class="photo-caption">1990-е: Защиты диссертаций</div>
+            </div>
+            
+            <!-- Добавьте больше фотографий по аналогии -->
+                 <div class="photo-item">
+                <img src="4.jpg" alt="Научная работа">
+                <div class="photo-caption">1990-е: Защиты диссертаций</div>
+            </div>
+            
+                 <div class="photo-item">
+                <img src="5.jpg" alt="Научная работа">
+                <div class="photo-caption">1990-е: Защиты диссертаций</div>
+            </div>
+            
+                 <div class="photo-item">
+                <img src="6.jpg" alt="Научная работа">
+                <div class="photo-caption">1990-е: Защиты диссертаций</div>
+            </div>
+        </div>
+        
+        <button class="scroll-btn scroll-right" aria-label="Прокрутить вправо">→</button>
+    </div>
+
+    <script>
+        // Прокрутка при клике на кнопки
+        const ribbon = document.querySelector('.photo-ribbon');
+        const scrollLeftBtn = document.querySelector('.scroll-left');
+        const scrollRightBtn = document.querySelector('.scroll-right');
+        
+        scrollLeftBtn.addEventListener('click', () => {
+            ribbon.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        
+        scrollRightBtn.addEventListener('click', () => {
+            ribbon.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+        
+        // Прокрутка мышью/тачем
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        
+        ribbon.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - ribbon.offsetLeft;
+            scrollLeft = ribbon.scrollLeft;
+        });
+        
+        ribbon.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        
+        ribbon.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        
+        ribbon.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - ribbon.offsetLeft;
+            const walk = (x - startX) * 2;
+            ribbon.scrollLeft = scrollLeft - walk;
+        });
+        
+        // Для мобильных устройств
+        ribbon.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - ribbon.offsetLeft;
+            scrollLeft = ribbon.scrollLeft;
+        });
+        
+        ribbon.addEventListener('touchend', () => {
+            isDown = false;
+        });
+        
+        ribbon.addEventListener('touchmove', (e) => {
+            if(!isDown) return;
+            const x = e.touches[0].pageX - ribbon.offsetLeft;
+            const walk = (x - startX) * 2;
+            ribbon.scrollLeft = scrollLeft - walk;
+        });
+    </script>					
+
+<!-- Lightbox JS в конце страницы -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+                </article>
+              </section>
+	
               <section id="contact">
                 <h2>Контактная информация</h2>
                 <address>

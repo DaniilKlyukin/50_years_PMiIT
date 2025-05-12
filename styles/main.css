@@ -4,7 +4,7 @@
 :root {
   --primary-color: #1a3a8f;
   --secondary-color: #0a1a4a;
-  --accent-color: #ffd700;
+  --accent-color: #2563eb; /* Красивый ярко-синий */
   --text-color: #333;
   --light-text: #fff;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
